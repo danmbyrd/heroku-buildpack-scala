@@ -126,7 +126,6 @@ echo "-----> Builing node!"
 export PROFILE="$BUILD_DIR/.profile_for_nvm"
 touch "$PROFILE"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash
-. "$PROFILE"
 nvm install 0.12
 nvm use 0.12
 echo "Running node!"
