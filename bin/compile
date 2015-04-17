@@ -125,7 +125,7 @@ fi
 echo "-----> Builing node!"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash
 export NVM_DIR="/app/.nvm"
-. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm. 
 nvm install 0.12
 nvm use 0.12
 echo "Running node!"
