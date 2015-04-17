@@ -123,9 +123,10 @@ fi
 
 # Install node
 echo "-----> Builing node!"
-rm -rf ~/.nvm
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash
-nvm install 0.12
+export NVM_DIR="/app/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" install 0.12
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" use 0.12
 
 # build app
 run_sbt "$javaVersion" "$SBT_USER_HOME_ABSOLUTE" "$SBT_BINDIR/$SBT_JAR" "$SBT_TASKS"
