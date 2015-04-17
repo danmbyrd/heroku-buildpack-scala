@@ -126,6 +126,8 @@ echo "-----> Builing node!"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash
 echo "-----> exporting NVM DIR!"
 export NVM_DIR="/app/.nvm"
+NVM_DIR="/app/.nvm"
+echo `ls $NVM_DIR`
 echo "-----> loading NVM"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm. 
 echo "-----> install node"
